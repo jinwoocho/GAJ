@@ -1,0 +1,94 @@
+body {
+    height: 600px;
+    width: 1200px;
+}
+/*center the content of the header */
+header {
+    text-align: center;
+    border-bottom: 3px;
+    background-color: lightblue;
+    display: inline-block;
+    width: 100%;
+
+
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+}
+ul :nth-child(odd) {
+    color: lightgreen;
+
+}
+ul :nth-child(even) {
+    color: green;
+}
+section {
+    text-align: center;
+}
+/* move(position) div*/
+div {
+    height: 80px;
+    width: 80px;
+    border: 3px solid black;
+    border-radius: 20%;
+}
+section :nth-child(2) {
+    background-color:red;
+    display: inline-block;
+    position: relative;
+    right: 150px;
+    bottom: 50px;
+
+}
+section :nth-child(3) {
+    background-color: blue;
+    display: inline-block;
+    position: relative;
+}
+section :nth-child(4) {
+    background-color: yellow;
+    display: inline-block;
+    position: relative;
+    left: 150px;
+    bottom: 50px;
+}
+section p {
+    color: lavender;
+}
+
+section :nth-child(6) {
+    background-color: darkgray;
+    padding: 4px 0;
+}
+section :nth-child(8) {
+    background-color: darkgray;
+    padding: 4px 0;
+}
+section :nth-child(7) {
+    color:white;
+    background-color: blue;
+    display: inline-block;
+    padding: 4px;
+    font-size: 22px;
+}
+footer {
+    text-align: center;
+    background-color: lightblue;
+    padding: 10px;
+}
+footer h1 {
+    color: darkblue;
+}
+footer p {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}

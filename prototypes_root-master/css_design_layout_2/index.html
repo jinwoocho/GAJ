@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="images">
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            width: 100vw;
+            height:100vh;
+        }
+        .header {
+            height: 20vh;
+            width: 100%;
+            background-color: bisque;
+            position: relative;
+        }
+        .logodiv {
+            height: 100%;
+            position: relative;
+            display: inline-block;
+        }
+        .logodiv > img {
+            height: 75%;
+            width: auto;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+
+        h1 {
+            display: inline-block;
+            color: orangered;
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 3px 3px 5px black;
+        }
+
+        .ulnav {
+            background-color: violet;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            width: 50%;
+            padding: 0;
+        }
+        .ulnav> li{
+            display: inline-block;
+            width: 24%;
+            height: 50px;
+            margin-left: 0;
+            margin-right: 0.4%;
+            padding: 0;
+            text-align: center;
+        }
+        .ulnav > li:hover {
+            background-color: orange;
+        }
+        .fs-2 {
+            width: 100%;
+            height: 30vh;
+            float: left;
+        }
+        .section_div1 {
+            height: 100%;
+            width: 23%;
+            float: left;
+            padding: 1%;
+
+        }
+        .section_div2 {
+            height: 100%;
+            width: 73%;
+            float: left;
+            padding: 1%
+        }
+        .fs-3 {
+            width: 100%;
+            height: 30vh;
+            float: left;
+
+        }
+        .section_div3 {
+            width: 23%;
+            float:left;
+            padding: 1%;
+        }
+        .section_div4 {
+            width: 73%;
+            float:left;
+            padding: 1%;
+        }
+        footer {
+            height: 20vh;
+            width: 100%;
+            background-color: bisque;
+            display: block;
+            position: absolute;
+            bottom: 0;
+        }
+        .container{
+            width: 70vw;
+            margin: auto;
+            position: relative;
+            height: 100%;
+        }
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <header class="header">
+        <div class="logodiv">
+            <img class="logo" src="images/HTML5_Logo_512.png" height="512" width="512" alt="html5_logo"/>
+        </div>
+        <h1>JC</h1>
+        <nav class="listnav">
+            <ul class="ulnav">
+                <li ><a href="home.html">home</a></li>
+                <li><a href="about_us.html">about us</a></li>
+                <li class="ourmenu"><a href="our_menu.html">our menu</a></li>
+                <li><a href="contact_us.html">contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="fs-2">
+        <div class="section_div1">1!!Lorem ipsum dolor sit amet, eu quo erant convenire explicari, summo maiorum voluptatibus cu sit. Iudico audire eos id, id quo prima scriptorem, vivendum lucilius similique te usu. Ei ius debet mnesarchum, vis porro veniam gubergren id. An vel tempor possit semper, at ius zril virtute facilisis. Et mel case fierent constituam, qui scripta mediocrem ei. Usu sale scribentur ei. Iriure quaerendum ea eum.</div>
+        <div class="section_div2">2@@Iudico audire eos id, id quo prima scriptorem, vivendum lucilius similique te usu. Ei ius debet mnesarchum, Et mel case fierent constituam, qui scripta mediocrem ei. Usu sale scribentur ei. Iriure quaerendum ea eum.</div>
+    </section>
+    <section class="fs-3">
+        <div class="section_div3">3##orem ipsum dolor sit amet, eu quo erant convenire explicari, summo maiorum voluptatibus cu sit. Iudico audire eos id, id quo prima</div>
+        <div class="section_div4">4$$$vivendum lucilius similique te usu. Ei ius debet mnesarchu</div>
+    </section>
+        <!-- how to put beneath-->
+    <footer>This is a footer</footer>
+        <!--Give the div a class of container
+        Set its width to 70vw
+        Change the width of your header, sections and footer to 100% (if that's not what you are using already)
+        Find a way to center your container on the page (horizontally)
+        Once you center your container all your content should be centered on the page
+        This will create a 15vw gutter on each side of your content-->
+    </div>
+</body>
+</html>

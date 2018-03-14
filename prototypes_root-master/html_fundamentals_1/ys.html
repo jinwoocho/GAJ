@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        body{
+            #margin: 0;
+        }
+        .navigationHeader{
+            height: 30vh;
+            background-color: yellow;
+            position: relative;
+        }
+        .logoContainer{
+            height: 100%;
+            position: relative;
+            display: inline-block;
+        }
+        .logoContainer > img {
+            height: 80%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .topNav{
+            background-color: red;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            margin: 0;
+            width: 50%;
+        }
+        .topNav > li{
+            display: inline-block;
+            width: 30%;
+            cursor: pointer;
+        }
+        .topNav > li:hover{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<header class="navigationHeader">
+    <div class="logoContainer">
+        <img src="https://goodlogo.com/images/logos/bell_logo_3065.gif">
+    </div>
+    <ul class="topNav">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</header>
+</body>
+</html>

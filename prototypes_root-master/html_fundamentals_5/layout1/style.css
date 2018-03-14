@@ -1,0 +1,32 @@
+.headerlist {
+    list-style-type: none;
+    display: inline-block;
+}
+.footerlist {
+    list-style-type: none;
+
+}
+#header {
+    border: 1px solid black;
+    background-color: yellow;
+    height: 15vh;
+    text-align: center;
+}
+#main-content {
+    border: 1px solid black;
+    border-top: hidden;
+    border-bottom: hidden;
+    height: 70vh;
+    text-align: center;
+}
+
+#main-content p:first-child {
+    margin-top: 0;
+}
+
+#footer {
+    border:1px solid black;
+    background-color: yellow;
+    height: 15vh;
+    text-align: center;
+}

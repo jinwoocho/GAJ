@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <title>ang intro practice</title>
+</head>
+<body ng-app>
+    <div ng-init="roster=[]; maxSignups=5; name=''">
+        <input type="text" ng-model="name">
+        <p ng-show="roster.length >= maxSignups">this class is full!</p>
+        <button ng-click="roster.push(name); name=''" ng-disabled="roster.length >= maxSignups">Add to list</button>
+        <ul>
+            <li ng-repeat="person in roster track by $index">{{ person + " index is: " + $index}}</li>
+        </ul>
+
+    </div>
+</body>
+</html>

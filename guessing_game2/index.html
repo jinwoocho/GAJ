@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>guessing game</title>
+    <script>
+//        var the_number= null;
+//        var random_number = Math.floor((Math.random() * 10) + 1);
+//        $(document).ready(start);
+//        function start(){
+//            the_number = random_number;
+//            $('#submit').click(make_guess)
+//        }
+//
+//        function make_guess(){
+//            var user_input = parseInt($('#guess_input').val());
+//            if (user_input = NaN){
+//                $('#response_div').text('not number')
+//            } else if (user_input > the_number){
+//                $('#response_div').text('too high')
+//            } else if (user_input < the_number){
+//                $('#response_div').text('too low')
+//            } else {
+//                $('#response_div').text('correct')
+//            }
+//        }
+
+
+        var the_number = null;
+        var guess_arr = [];
+        var count = 0;
+        $(document).ready(start);
+        function start(){
+            the_number = pick_number();
+            $(document).keypress(function(e) {
+                if(e.which == 13) {
+                    make_guess();
+                }
+            });
+            $('#submit').click(make_guess);
+        }
+        function pick_number(){
+            return  Math.floor((Math.random() * 50) + 1);
+        }
+        function make_guess(){
+            ++count;
+            var user_input = parseInt($('#guess_input').val());
+            guess_arr.push(user_input);
+            $('#numberOfGuess').css('color','darkblue').text('Your guesses are : ' + guess_arr);
+            $('#countNumber').css('color','skyblue').text('You tried : ' + count + ' times');
+            if(isNaN(user_input)) {
+                $('#response_div').text('not number').css('color','darkviolet');
+//                guess_arr.length -2;
+            } else if (user_input === the_number) {
+                $('#response_div').text('you are correct').css('color','green');
+                count = 0;
+                guess_arr = [];
+                the_number = pick_number();
+            }else if(user_input < 0 || user_input > 50){
+                $('#response_div').text('you are wayy off').css('color','darkred');
+            } else if(user_input > the_number){
+                if (user_input <= (the_number+5)) {
+                    $('#response_div').text('high, almost there').css('color','red');
+                }else {
+                    $('#response_div').text('too high').css('color','red');
+                }
+            } else if(user_input < the_number){
+                 if (user_input >= the_number-5){
+                $('#response_div').text('low, almost there').css('color','red');
+            } else {
+                     $('#response_div').text('too low').css('color','red');
+                 }
+            }
+        }
+
+    </script>
+    <style>
+        body{
+            text-align: center;
+        }
+        #container{
+            border:3px solid #4a8cdb;
+            position: absolute;
+            height:20vh;
+            width:30vw;
+        }
+    </style>
+</head>
+<body>
+
+    <!--<p>Click PLAY to start the game</p>-->
+    <!--<button id="button" onclick="creatGame()">Play</button>-->
+
+    <div class="container">
+        <h3>Guessing Game</h3>
+        <p>pick a number between 1 and 50</p>
+        <div class="box">
+            <input id="guess_input">
+            <button id="submit">GUESS IT</button>
+            <div id="response_div" class="answer"></div>
+            <div id="numberOfGuess"></div>
+            <div id="countNumber"></div>
+        </div>
+    </div>
+
+
+</body>
+</html>

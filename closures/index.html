@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <style>
+        .boxDiv{
+            border: 1px solid red;
+            height: 10vmin;
+            width:10vmin;
+            float:left;
+        }
+    </style>
+    <script>
+        var student = [
+,
+            {
+                name:Jinwoo,
+                id:1
+            },
+            {
+                name:alsdk,
+                id:1
+            },
+            {
+                name:name3,
+                id:1
+            }
+        ];
+
+        $(document).ready(function(){
+            for (var i = 0; i < 10; i++) {
+                //var div = $("<div>").text('div'+i).addClass('boxDiv');
+                var div = $("<div>", {
+                    text: 'div' + i,
+                    class: 'boxDiv'
+                });
+                makeClickHandler();
+                $('body').append(div);
+
+            }
+
+            function makeClickHandler(){
+                var localI = i;
+                div.on('click', function () {
+                    console.log('i is ' + localI);
+                });
+            }
+        });
+
+    </script>
+</head>
+<body>
+<div id="dialog">info goes here</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.ABM{
+    font-size: 12px;
+}
+h2{
+    color: Blue;
+}
+.center {
+    text-align: center;
+
+}
+img {
+    height: 300px;
+    width: 200px;
+    float: left;
+}
+.experiencehead {
+    font-family: Montserrat;
+    background-color: aqua;
+}
+.experiencelist {
+    list-style-type: upper-alpha
+}
+.skillhead {
+    font-family: Montserrat;
+}
+.myskilllist {
+    color: chocolate;
+}
+.nav {
+    list-style-type: none;]
+    margin-top: 80px;
+    margin-bottom:80px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+}

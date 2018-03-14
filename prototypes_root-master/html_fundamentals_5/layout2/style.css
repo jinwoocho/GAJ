@@ -1,0 +1,16 @@
+.listtype {
+    list-style-type: none;
+    display: inline-block;
+}
+#header {
+    border: 1px solid black;
+    border-bottom: hidden;
+    background-color: yellow;
+    height: 15vh;
+    text-align: center;
+}
+#main-content {
+    border: 1px solid black;
+    height: 100vh;
+    text-align: center;
+}

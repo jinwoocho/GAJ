@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title><script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+
+<body onload="the_number = pick_number()">
+<input id="guess_input" type="number">
+<div id="response_div">Guess a number!</div>
+<button type="button">Submit</button>
+</body>
+<script>
+    var the_number = null;
+    function pick_number() {
+        var random_number = Math.floor((Math.random() * 10) + 1);
+        return random_number;
+    }
+    $('button').click(function(){
+        make_guess();
+    })
+    function make_guess() {
+        var the_guess = $('#guess_input').val();
+        if (the_guess > the_number){
+            $("#response_div").text("Too High!");
+        }
+        if(the_guess < the_number) {
+            $("#response_div").text("Too Low!");
+        }
+        if(the_guess == the_number) {
+            $("#response_div").text("You guessed it!");
+        }
+    }
+</script>
+</html>
